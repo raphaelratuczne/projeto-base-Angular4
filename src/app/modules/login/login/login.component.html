@@ -1,0 +1,28 @@
+
+<div class="container vertical-center">
+  <div class="card card-container center-block">
+    <!-- <img id="logo-img" class="logo-img-card" src="assets/Logo300.png" /> -->
+    <p id="empresa-nome" class="empresa-nome-card"></p>
+    <form class="form-login" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <span id="nome" class="nome"></span>
+      <input type="text" id="inputNome" formControlName="nome" class="form-control" placeholder="Nome de usuario" required (blur)="onValueChanged()">
+      <div *ngIf="formErrors.nome" class="alert alert-danger">
+        {{ formErrors.nome }}
+      </div>
+      <input type="password" id="inputSenha" formControlName="senha" class="form-control" placeholder="Senha" required (blur)="onValueChanged()">
+      <div *ngIf="formErrors.senha" class="alert alert-danger">
+        {{ formErrors.senha }}
+      </div>
+      <div *ngIf="podeSalvar" id="remember" class="checkbox">
+        <label>
+          <input type="checkbox" formControlName="lembreMe"> Salvar e continuar
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block btn-login" type="submit" [disabled]="!formulario.valid || enviando">Login</button>
+    </form>
+    <div *ngIf="errorMsg" class="alert alert-danger">
+      {{ errorMsg }}
+    </div>
+    <!-- <a href="#" routerLink="/esqueci-senha" class="esqueceu-senha">Esqueceu sua senha?</a> -->
+  </div>
+</div>

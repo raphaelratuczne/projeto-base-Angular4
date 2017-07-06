@@ -1,0 +1,9 @@
+@import '../login/login.component';
+
+.form-resetar-senha {
+  @extend .form-login;
+}
+
+.btn-resetar-senha {
+  @extend .btn-login;
+}

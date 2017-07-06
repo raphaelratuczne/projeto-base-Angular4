@@ -1,0 +1,14 @@
+﻿/* You can add global styles to this file, and also import other style files */
+
+@import 'variables';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+
+body, html {
+    min-height: 100%;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}

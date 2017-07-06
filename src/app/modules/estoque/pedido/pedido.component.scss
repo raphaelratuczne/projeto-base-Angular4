@@ -1,0 +1,34 @@
+@import "../estoque/estoque.component";
+
+.table td.truncate {
+  max-width: 390px;
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+.caixa-de-data {
+  min-width: 300px;
+  position: absolute;
+  z-index: 10;
+}
+
+.ng2-datetime:focus {
+  outline: none;
+}
+
+.coluna-acao {
+  width: 90px;
+}
+
+.invalido {
+  border: 1px solid red;
+}
+
+.invalido:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(200, 0, 0, 0.6);
+}
